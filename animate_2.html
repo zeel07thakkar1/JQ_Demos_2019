@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Animation using animate() method_2</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+		#div1
+		{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+
+		}
+	</style>
+</head>
+<body>
+	<button type="button"> Start Animation</button>
+	<br><br>
+	<div id="div1"></div>
+
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$("button").click(function(event) {
+				/* Act on the event */
+				$("#div1").animate({height:'toggle',width:'toggle'}); //div disappear/appear from both the side.
+			});
+		});
+	</script>
+</body>
+</html>

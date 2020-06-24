@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>On Method</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<p>Click me!!!</p>
+	<script>
+		jQuery(document).ready(function($) {
+			$("p").on('click', function(event) {   //on method attach the more than one event.
+				event.preventDefault();
+				/* Act on the event */
+				$(this).hide();
+			});
+		});
+	</script>
+</body>
+</html>

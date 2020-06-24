@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>stop() method</title>
+	<link rel="stylesheet" href="">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		.heading
+		{
+			width: 500px;
+			margin: 0px auto;
+			border: 2px solid red;
+			text-align: center;
+			cursor: pointer;
+			background-color: pink;
+		}
+		.content
+		{
+			width: 500px;
+			margin: 0px auto;
+			border: 1px solid green;
+			text-align: center;
+			display: none;
+			background-color: #94f9c3;
+			color: green;
+			box-shadow: 10px 10px 10px green;
+		}
+
+		#btn
+		{
+			background-color: #5a5ae4;
+			color: white;
+			height: 50px;
+			width: 150px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-weight: bold;
+			margin: 30px 603px;
+		}
+		
+	</style>
+</head>
+<body>
+<div style="height: 250px;width:100%;float: left;box-shadow: 5px 5px 5px gray;">
+	
+
+	<div class="heading">
+	<h3>Click me for slideDown()</h3>
+	</div>
+
+	<div class="content">
+	<h4> This is slideDown() method </h4>
+	<p>This method give the sliding effect on element</p>
+	<p>This method include both methods slideDown().</p>
+	</div>
+</div>
+
+
+<button type="button" id="btn">Stop SlideDown()</button>
+<script>
+		jQuery(document).ready(function($) {
+			$(".heading").click(function(event) {
+				/* Act on the event */
+				$(".content").slideDown(3000);
+			});
+
+			$('#btn').click(function(event) {
+				/* Act on the event */
+				$(".content").stop();  //stop the slide down effect / all custom animation / fading effects 
+			});
+		});
+
+
+
+</script>
+
+</body>
+</html>

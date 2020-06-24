@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>basic</title>
+	<link rel="stylesheet" href="">
+	<!--JQuery CDN Link--->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<p>click me to disappear!!</p>
+	<p id="dbl_click">Double click on me</p>
+	
+	<script>
+		$(document).ready(function($) {
+			$("p").click(function(event) {   //click event
+				/* Act on the event */
+				$(this).hide();
+			});
+		});
+
+
+		
+	</script>
+
+</body>
+</html>

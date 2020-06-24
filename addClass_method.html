@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>addClass() method</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		.blue
+		{
+			color: blue;
+			font-size: 3vw;
+		}
+		.green
+		{
+			color: green;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<p id="test1">This is addClass() method.</p>
+	<p id="test2">This addClass() method add more than one class to the selected elements. CSS is defined in header section so add those css classes to p tag on button click!! </p>
+	<button type="button">addClass()</button>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$("button").click(function(event) {
+				/* Act on the event */
+					$("#test1").addClass('blue');
+					$("#test2").addClass('green');
+			});
+		});
+	</script>
+	
+</body>
+</html>

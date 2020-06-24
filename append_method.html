@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Append Method</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<p id="test">What is Append Method? : </p>
+	<ul>
+		<li>Item1</li>
+		<li>Item2</li>
+		<li>Item3</li>
+	</ul>
+
+	<button type="button" id="btn1">Append Text</button>
+	<button type="button" id="btn2">Append Item in List</button>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$("#btn1").click(function(event) {
+				/* Act on the event */
+				$("#test").append('<b>Insert Content at the end of the Selected Elements.</b>');
+			});
+
+			$("#btn2").click(function(event) {
+				/* Act on the event */
+				$("ul").append('<li>Item4</li>');
+			});
+		});
+	</script>
+</body>
+</html>

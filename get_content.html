@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Get Content</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<h3>---Get Content [text / html / val / attr]---</h3>
+	Username:<input type="text" id="uname">
+	<p style="font-size: 30px;" id="test">This is Text written in <b>bold</b>...</p>
+
+	<h4><a href="http://www.google.com" id="link_get" title="google_link">Google</a></h4>
+
+	<button type="button" id="text_get">Show Text</button>
+	<button type="button" id="html_get">Show HTML</button>
+	<button type="button" id="val_get">Show Input Value</button>
+	<button type="button" id="attr_get">Show Attribute value of Link</button>
+	
+	
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$("#text_get").click(function(event) {
+				/* Act on the event */
+				alert("Text is: " + $("#test").text());
+			});
+
+			$("#html_get").click(function(event) {
+				/* Act on the event */
+				alert("HTML is: "+ $("#test").html());
+			});
+
+			$("#val_get").click(function(event) {
+				/* Act on the event */
+				alert("Value of Input box is: "+ $("#uname").val());
+			});
+
+			$("#attr_get").click(function(event) {
+				/* Act on the event */
+				alert("Value of Attribute of [href] is:" + $("#link_get").attr("title")); //get value of particular attribute it is any you want
+			});
+
+		});
+	</script>
+</body>
+</html>

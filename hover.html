@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Hover</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<p style="background-color: red;color: white;font-size: 20px;">Hover Over Me!!!</p>
+	<script>
+		jQuery(document).ready(function($) {
+			$("p").hover(function() {
+				/* Stuff to do when the mouse enters the element */
+				alert("This is Hover Event on Element");
+			}, function() {
+				/* Stuff to do when the mouse leaves the element */
+				alert("Bye.. Bye!!!!");
+			});
+		});
+	</script>
+</body>
+</html>

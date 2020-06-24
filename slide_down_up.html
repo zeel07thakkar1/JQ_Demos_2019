@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SlideDown() & SlideUp() method</title>
+	<link rel="stylesheet" href="">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		.heading
+		{
+			width: 500px;
+			margin: 0px auto;
+			border: 2px solid red;
+			text-align: center;
+			cursor: pointer;
+			background-color: pink;
+		}
+		.content
+		{
+			width: 500px;
+			margin: 0px auto;
+			border: 1px solid green;
+			text-align: center;
+			display: none;
+			background-color: #94f9c3;
+			color: green;
+			box-shadow: 10px 10px 10px green;
+			
+		}
+		.heading2
+		{
+			width: 500px;
+			margin: 0px auto;
+			border: 2px solid red;
+			text-align: center;
+			cursor: pointer;
+			background-color: pink;
+		}
+		.content2
+		{
+			width: 500px;
+			margin: 0px auto;
+			border: 1px solid green;
+			text-align: center;
+			
+			background-color: #94f9c3;
+			color: green;
+			box-shadow: 10px 10px 10px green;
+			
+		}
+	</style>
+</head>
+<body>
+<div style="height: 250px;width: 45%;float: left;box-shadow: 5px 5px 5px gray;margin-right: 30px;">
+
+	<div class="heading">
+	<h3>Click me for slideDown()</h3>
+	</div>
+
+	<div class="content">
+	<h4> This is slideDown() method </h4>
+	<p>This method give the sliding effect on element</p>
+	</div>
+</div>
+
+
+<div style="height: 250px;width: 45%;float: left;box-shadow: 5px 5px 5px gray">
+	<div class="heading2">
+	<h3>Click me for slideUp()</h3>
+	</div>
+
+	<div class="content2">
+	<h4> This is slideUp() method </h4>
+	<p>This method give the sliding effect on element</p>
+	</div>
+</div>
+
+	<script>
+		jQuery(document).ready(function($) {
+			$(".heading").click(function(event) {
+				/* Act on the event */
+				$(".content").slideDown('slow');
+			});
+		});
+
+		jQuery(document).ready(function($) {
+			$(".heading2").click(function(event) {
+				/* Act on the event */
+				$(".content2").slideUp('slow');
+			});
+		});
+		
+	</script>
+</body>
+</html>

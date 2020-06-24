@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Toggle Effect</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+	<style type="text/css" media="screen">
+		#toggle_btn
+		{
+			background-color: #84de84;
+			color: white;
+			height: 50px;
+			width: 80px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		#toggle_btn:hover
+		{
+			background-color:red;
+			color: white;
+			
+		}
+	</style>
+
+</head>
+<body>
+	<p style="background-color: green;color: white;font-size: 20px;">This is Toggle Effect</p>
+	<button type="button" id="toggle_btn">Click Me</button>
+	<script>
+		jQuery(document).ready(function($) {
+			$("#toggle_btn").click(function(event) { //toggle button use for both hide/show effect using single button
+				/* Act on the event */
+				$("p").toggle(1000); //give the speed for hiding and showing
+			});
+		});
+	</script>
+</body>
+</html>

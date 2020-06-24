@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Dimenssions</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		.box
+		{
+			height: 300px;
+			width: 300px;
+			background-color: #9be690;
+			border: 2px solid red;
+			padding: 20px;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h4>height()/width() : set or return height/width of an element(exclude padding , border , margin)</h4>
+	<h4>innerHeight()/innerWidth() : set or return height/width of an element(include padding)(give padding : 20px)</h4>
+	<h4>outerHeight() / outerWidth() method returns the width of an element (includes padding and border).(give padding : 20px ; border : 2px)</h4>
+	<h4>outerHeight(true) / outerWidth(true) method returns the width of an element (includes padding, border,margin).(give padding : 20px ; border : 2px ; margin : 10px)</h4>
+
+	<div class="box"></div>
+	<br><br>
+	<p id="test1">Height of div[exclude padding + border + marging] : </p>
+	<p id="test2">Width of div[exclude padding + border + marging] : </p>
+
+	<p id="test3">innerHeight of div[include padding] : </p>
+	<p id="test4">innerWidth of div[include padding] : </p>
+
+	<p id="test5">outerHeight of div[include padding + border] : </p>
+	<p id="test6">outerWidth of div[include padding + border] : </p>
+
+	<p id="test7">outerHeight(true)[include padding + border + marging] of div : </p>
+	<p id="test8">outerWidth(true)[include padding + border + marging] of div : </p>
+
+	<button type="button" id="btn1">Height() / Width()</button>
+	<button type="button" id="btn2">innerHeight() / innerWidth()</button>
+	<button type="button" id="btn3">outerHeight() / outerWidth()</button>
+	<button type="button" id="btn4">outerHeight(true) / outerWidth(true)</button>
+
+
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$("#btn1").click(function(event) {
+				/* Act on the event */
+				var h = $(".box").height();
+				var w=$(".box").width();
+				$("#test1").append(h);
+				$("#test2").append(w);
+			});
+
+			$("#btn2").click(function(event) {
+				/* Act on the event */
+				var h = $(".box").innerHeight();
+				var w=$(".box").innerWidth();
+				$("#test3").append(h);
+				$("#test4").append(w);
+			});
+
+			$("#btn3").click(function(event) {
+				/* Act on the event */
+				var h = $(".box").outerHeight();
+				var w=$(".box").outerWidth();
+				$("#test5").append(h);
+				$("#test6").append(w);
+			});
+
+			$("#btn4").click(function(event) {
+				/* Act on the event */
+				var h = $(".box").outerHeight(true);
+				var w=$(".box").outerWidth(true);
+				$("#test7").append(h);
+				$("#test8").append(w);
+			});
+
+
+
+		});
+	</script>
+</body>
+</html>

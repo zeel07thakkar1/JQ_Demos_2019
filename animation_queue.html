@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Animation queue</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+		#div1
+		{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+
+		}
+	</style>
+</head>
+<body>
+	<button type="button" id="btn">Start Animation</button><br><br>
+	<div id="div1"></div>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$("#btn").click(function(event) {
+				/* Act on the event */
+				var div = $("#div1");
+
+				div.animate({height:'200px',opacity:'0.5'},1000); //add more than one animation at a time.
+				div.animate({width:'300px',opacity:'0.8'},1000);
+				div.animate({height:'100px',opacity:'0.3'},2000);
+				div.animate({width:'100px',opacity:'0.5'},2000);
+			});
+		});
+	</script>
+
+</body>
+</html>

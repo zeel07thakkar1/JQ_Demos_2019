@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Mouse Enter Event</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Muse Enter Event</h1>
+	<p style="color: red;font-size: 20px;">Hover me</p>
+
+	<script>
+		jQuery(document).ready(function($) {
+			$("p").mouseenter(function(event) {
+				/* Act on the event */
+				alert("This is mouse Enter Event ");
+			});
+		});
+	</script>
+</body>
+</html>

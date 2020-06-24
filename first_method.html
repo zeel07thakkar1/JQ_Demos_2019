@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>first() / last() / eq() method</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<h3>first() method returns first element present in page which specified in JQ.</h3>
+	<h3>last() method returns last element present in page which specified in JQ.</h3>
+	<h3>eq(index) method returns an element with a specific index number of the selected elements.[starting from 0]</h3>
+
+	<p>Hi this is JQuery p tag1...!![index 0]</p>
+	<p>Hi this is JQuery p tag2...!![index 1]</p>
+	<p>Hi this is JQuery p tag3...!![index 2]</p>
+	<h2>Hi this is JQuery...!!</h2>
+	<h3>Hi this is JQuery...!!</h3>
+	<h4>Hi this is JQuery...!!</h4>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$("p").first().css({
+				backgroundColor: 'red',
+				color: 'white',
+				fontSize:'30px'
+			});
+
+			$("p").last().css({
+				backgroundColor: 'green',
+				color: 'yellow',
+				fontSize:'30px'
+			});
+
+			$("p").eq(1).css({
+				backgroundColor: 'pink',
+				color: 'green',
+				fontSize:'20px'
+			});
+
+
+		});
+	</script>
+</body>
+</html>

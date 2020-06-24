@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>remove()/empty() Methods</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<style type="text/css">
+		.box
+		{
+			width: 350px;
+			height: 300px;
+			box-shadow: 5px 5px 10px #dab50b;
+			margin: 0px auto;
+		}
+		.main_div
+		{
+			width: 50%;
+			float: left;
+			height: 500px;
+		}
+		.btn1
+		{
+			margin-top: 20px;
+			margin-left: 260px;
+			width: 80px;
+			height: 50px;
+			background-color: blue;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+
+		}
+		.btn2
+		{
+			margin-top: 20px;
+			margin-left: 260px;
+			width: 80px;
+			height: 50px;
+			background-color: blue;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="main_div">
+	<div class="box" id="div1">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<button type="button" class="btn1">remove()</button>
+	</div>
+
+	<div class="main_div">
+	<div class="box" id="div2">
+		<p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<button type="button" class="btn2">empty()</button>
+	</div>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".btn1").click(function(event) {
+				/* Act on the event */
+					$("#div1").remove();
+					alert("Remove method remove whole element with its child..!!");
+			});
+
+			$(".btn2").click(function(event) {
+				/* Act on the event */
+				$("#div2").empty();
+				alert("Empty method remove only child of selected element..!!");
+			});
+		});
+	</script>
+
+</body>
+</html>

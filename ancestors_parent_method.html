@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ancestors -> parent()</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		div,ul,li,span
+		{
+			border: 1px solid blue;
+			width: 500px;
+			display: block;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+
+<p id="test">parent(): returns the immidiate parent element of the selcted element</p>
+	<div>div
+		<ul>ul
+			<li>li
+				<span>span</span>
+			</li>
+		</ul>
+	</div>
+<br><br>
+	<div>div
+		<p>p
+			<span>span</span>
+		</p>
+	</div>
+
+	
+	
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			
+				/* Act on the event */
+				$("span").parent().css({
+					color: 'red',
+					border : '5px solid green'
+				});
+		});
+	</script>
+
+</body>
+</html>

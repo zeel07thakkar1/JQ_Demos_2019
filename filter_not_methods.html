@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>filter() / not() method</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<h3>filter() method lets you specify a criteria(Ex.give class name).Elements match the criteria are selected.</h3>
+	<h3>not() method returns all elements that do not match the criteria.(Ex.give class name)</h3>
+	
+
+	<p class="intro">Hi this is JQuery p tag1...!!</p>
+	<p>Hi this is JQuery p tag2...!!</p>
+	<p class="intro">Hi this is JQuery p tag3...!!</p>
+	
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$("p").filter(".intro").css({
+				backgroundColor: 'red',
+				color: 'white',
+				fontSize:'30px'
+			});
+
+			$("p").not('.intro').css({
+				backgroundColor: 'pink',
+				color: 'red',
+				fontSize:'20px'
+			});
+
+			
+
+
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>After/Before</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		#div1
+		{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+			left: 100px;
+
+		}
+	</style>
+</head>
+<body>
+	<!--<div id="div1"></div><br><br><br><br><br><br><br><br>-->
+	<p>Helloooooooo</p>
+	<!-- <img src="w3jquery.gif" alt="img"><br><br><br><br> -->
+	<button type="button" id="btn1">Before</button>
+	<button type="button" id="btn2">After</button>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$("#btn1").click(function(event) {
+				/* Act on the event */
+				$("p").before('<b>Before</b>');
+			});
+
+			$("#btn2").click(function(event) {
+				/* Act on the event */
+				$("p").after('<b>After</b>');
+			});
+		});
+	</script>
+
+</body>
+</html>

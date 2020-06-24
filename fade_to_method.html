@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>FadeTo() Method</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<style type="text/css">
+		#orange
+		{
+			width: 500px;
+			height: 50px;
+			background-color: orange;
+			border: 1px solid black;
+			display: none;
+		}
+		#white
+		{
+			width: 500px;
+			height: 50px;
+			background-color: white;
+			border: 1px solid black;
+			display: none;
+		}
+		#green
+		{
+			width: 500px;
+			height: 50px;
+			background-color: green;
+			border: 1px solid black;
+			display: none;
+		}
+		#btn
+		{
+			background-color: #5a5ae4;
+			color: white;
+			height: 50px;
+			width: 90px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-weight: bold;
+		}
+	</style>
+
+</head>
+<body>
+	<h1>This is FadeToe() Method(This method allows fading to a given opacity)</h1>
+	<button type="button" id="btn">FadeTo</button>
+	
+	 <br><br>
+
+	<div id="orange"></div>
+	<div id="white"></div>
+	<div id="green"></div>
+
+	<script>
+		jQuery(document).ready(function($) {
+			$("#btn").click(function(event) {
+				/* Act on the event */
+				$("#orange").fadeTo('slow', 0.3);  //two parameter speed and another is opacity -> give opacity value b/w(0 & 1)
+				$("#white").fadeTo('slow', 0.5);
+				$("#green").fadeTo('slow', 0.8);
+
+			});
+		});
+
+		
+	</script>
+
+</body>
+</html>

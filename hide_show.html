@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>hide / show when button click</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<p>Hii this is JQuery...</p>
+	<button type="button" id="hide">Hide paragraphs</button>
+	<button type="button" id="show">Show paragraphs</button>
+
+	<script>
+		$(document).ready(function($) {
+			$("#hide").click(function(event) { //use this button via id
+				/* Act on the event */
+				$("p").hide(1000); //give the speed parameter to specify the speed of the element for hiding and showing but its a optional  -> give value in milliseconds
+			});
+		});
+
+		jQuery(document).ready(function($) {
+			$("#show").click(function(event) {  //use this button via id
+				/* Act on the event */
+				$("p").show();
+					
+				
+			});
+		});
+	</script>
+</body>
+</html>

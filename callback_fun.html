@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>callback function()</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<p>Hii this is JQuery...</p>
+	<button type="button" id="hide">Hide paragraphs</button>
+	<button type="button" id="show">Show paragraphs</button>
+
+	<script>
+		$(document).ready(function($) {
+			$("#hide").click(function(event) { //use this button via id
+				/* Act on the event */
+				$("p").hide(1000, function() {
+
+						alert("Hide method is done..!!");
+
+					});//give the speed parameter to specify the speed of the element for hiding and showing but its a optional  -> give value in milliseconds and callback function which call immidiate after current effect is finished.
+			});
+		});
+
+		jQuery(document).ready(function($) {
+			$("#show").click(function(event) {  //use this button via id
+				/* Act on the event */
+				$("p").show(1000, function() {  //with callback function
+					alert("Yehhh!! Paragraph is Visible..");
+				});
+					
+				
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Focus / Blur Event</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	Username:<input type="text" class="input_cl"><br><br>
+	Password: <input type="password" name="" class="input_cl">
+	<p style="display: none">Please Fill the textbox</p>
+
+	<script>
+		jQuery(document).ready(function($) {
+			$(".input_cl").focus(function(event) { //fields get the focus
+				/* Act on the event */
+				$(this).css('background-color', 'yellow');
+				
+			});
+		});
+
+		jQuery(document).ready(function($) {
+			$(".input_cl").blur(function(event) { //fields loses the focus
+				/* Act on the event */
+
+				$(this).css('background-color', 'blue');
+				$("p").show();
+			});
+		});
+	</script>
+</body>
+</html>
